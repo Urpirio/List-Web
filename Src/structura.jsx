@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import "./structura.less"
 import SVheader from './components/Sventana/SVheader';
-import SvmainProyects from './components/Sventana/SvmainProyects';
+import SVmain from './components/Sventana/SVmain';
 import SvheaderData from './components/Sventana/Data/SvheaderData';
+import Smain from './components/main/Smain';
 
 export default class Structura extends Component {
   render() {
@@ -12,13 +14,11 @@ export default class Structura extends Component {
             const CerrarE = (props) =>{
 
                 return(
-                    <div className='Svheader__div2'>
+                    <div style={{display: "none"}} className='Svheader__div2'>
                         <span>
                             <h4>{props.Username}</h4>
                         </span>
-                        <span>
-                        <i class='bx bx-log-out'></i>Cerrar sesion
-                        </span>
+                        <span><i class='bx bx-log-out'></i>Cerrar sesion</span>
                    </div>
                 )
             };
@@ -40,13 +40,13 @@ export default class Structura extends Component {
     );
 
     return (
-      <div>
+      <div className='body'>
         <section className='Sventana' >
             {startlist}
-            <SvmainProyects/>
+            <SVmain/>
         </section>
         <section className='Smain'>
-            
+            <Smain/>
         </section>
       </div>
     )
