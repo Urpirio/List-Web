@@ -5,6 +5,5 @@ const SvheaderData = [
         Username: "Julia martinez",
         id:"Juliamartinez",
     },
-    
 ]
 export default SvheaderData;
