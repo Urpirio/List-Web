@@ -1,0 +1,90 @@
+.SM_div2_div1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    .SM_d2_d1_div1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        input{
+            font-size: 14px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        textarea{
+            resize: none;
+            outline: none;
+            border: none;
+            padding: 5px;
+            scrollbar-width: none;
+        }
+    }
+    .SM_d2_d1_div2{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid #000;
+        div{
+            display: flex;
+            gap: 10px;
+            padding: 5px;
+            button{
+                height: 0.9cm;
+                border-radius: 10px;
+                border: 1px solid black;
+                padding: 10px;
+                gap: 5px;
+                font-weight: 600;
+            }
+            .Sm__btn1{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                transition: 300ms;
+                #i2{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                &:hover{
+                    background: gray;
+                    color: white;
+                }
+            }
+            .Sm__btn2{
+                display: flex;
+                align-items: center;
+                transition: 300ms;
+                &:hover{
+                    background-color: #9f9e9e;
+                    color: white;
+                }
+
+            }
+            .Sm__btn3{
+        
+                display: flex;
+                align-items: center;
+                background: red;
+                color: white;
+                transition: 300ms;
+                
+                &:hover{
+                    background: #ce0101;
+                }
+                &:disabled{
+                    background: #ff00006a;
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+
+    
+}
