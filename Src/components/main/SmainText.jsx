@@ -1,5 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import "./style/SmainText.less";
+import SmainModalDeploy from './SmainModalDeploy';
+import SmainModal from './SmainModal';
+
+
+
 
 export default class SmainText extends Component {
   render() {
@@ -7,11 +12,16 @@ export default class SmainText extends Component {
     let placeholderV = "Escribe tus metas aqui";
     
     let clAss;
+    let Vacio;
 
     
 
     const Cancelar = () =>{
         document.querySelector(".SM_div2_div1").style.display = "none";
+        document.getElementById("SM__div1_Addtarea").style.display ="flex";
+        if(document.getElementById()){
+
+        }
     };
 
     const AñadirTarea = () =>{
@@ -35,11 +45,10 @@ export default class SmainText extends Component {
         </div>
         
         </div>`;
-        }else if(TextareaDescripcion != ""){
-
         }else{
-
+           
         }
+
     };
 
     // const AñadirTareaK = (e) =>{
@@ -50,8 +59,10 @@ export default class SmainText extends Component {
 
         if(InputTitulo == ""){
             document.getElementById("Sm__btn3").setAttribute("disabled",true);
+            document.getElementById("Sm__btn3").style.background = "#ff00006a";
         }else{
-        document.getElementById("Sm__btn3").removeAttribute("disabled")
+        document.getElementById("Sm__btn3").removeAttribute("disabled");
+        document.getElementById("Sm__btn3").style.background = "red";
         };
 
         if(InputTitulo == ""){
@@ -71,7 +82,7 @@ export default class SmainText extends Component {
         }else{
         document.getElementById("Sm__btn3").removeAttribute("disabled")
         };
-    }
+    };
 
     const Textareachange = () =>{
         let InputTitulo = document.getElementById("inputTitulo").value;
@@ -84,8 +95,11 @@ export default class SmainText extends Component {
     };
 
 
+
+    
+
     return (
-        <div className='SM_div2_div1' id='Smain__div2'>
+        <div className='SM_div2_div1' id='SM_div2_div1'>
 
         <div className='SM_d2_d1_div1' >
             <input onChange={Inputchange} onClick={Inputclick} type="text" name="" id="inputTitulo" placeholder={placeholderV} required/>
@@ -97,23 +111,25 @@ export default class SmainText extends Component {
                 padding: "5px",
                 borderBottom: "1px solid red",
             }}>Porfavor ingresa el nombre de la tarea</span>
-            <textarea onChange={Textareachange} name="" id="TextareaDescripcion" placeholder='Descripcion'></textarea>
+            <textarea onChange={Textareachange} name="" value={Vacio} id="TextareaDescripcion" placeholder='Descripcion'></textarea>
         </div>
 
         <div className='SM_d2_d1_div2'>
-            <div>
-                <button className='Sm__btn1'>
-                    <i id='i1' class="bi bi-inbox"></i>
-                    Bandeja de entrada
-                    <i id='i2' class='bx bx-chevron-right'></i></button>
+            <div className='Sm_bandeja'>
+
+                <SmainModalDeploy/>
+                <SmainModal/>
+
+                    
             </div>
+
             <div>
                 <button onClick={Cancelar}  className='Sm__btn2' id='Sm__btn2'>Cancelar</button>
                 <button onClick={AñadirTarea}  className='Sm__btn3' id='Sm__btn3'>Añadir tarea</button>
             </div>
+            
         </div>
-
     </div>
-    )
-  }
-}
+    );
+  };
+};
