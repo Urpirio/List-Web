@@ -1,3 +1,5 @@
+@color-hover-ventana: #5b5b5b;
+@color-hover-fonts: #787676;
 .Svmain{
     display: flex;
     flex-direction: column;
@@ -13,9 +15,10 @@
             align-items: center;
             width: 90%;
             gap: 10px;
-            border: 1px solid black;
+            border: none;
             padding: 5px;
-            border-radius: 10px;
+            border-radius: 5px;
+            cursor: pointer;
             i{
                 height: 20px;
                 width: 20px;
@@ -24,16 +27,33 @@
                 align-items: center;
             }
             &:hover{
-                background: gray;
-
+                background: #e7e6e6;
             }
         }
         #Svm__tareas{
             font-size: 16px;
+            color: red;
             i{
                 background: red;
                 border-radius: 100%;
                 color: white;
+            }
+        }
+        #Svm__Buscador{
+            &:hover{
+                color: @color-hover-fonts;
+                i{
+                    color: @color-hover-ventana;
+                }
+            }
+        }
+
+        #Svm__BnEntrada{
+            &:hover{
+                color: @color-hover-fonts ;
+                i{
+                    color: @color-hover-ventana;
+                }
             }
         }
 
