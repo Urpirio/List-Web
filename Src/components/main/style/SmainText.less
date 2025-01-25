@@ -1,5 +1,5 @@
 .SM_div2_div1{
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     width: 80%;
@@ -48,6 +48,7 @@
                 align-items: center;
                 gap: 5px;
                 transition: 300ms;
+                background: #ebebeb;
                 #i2{
                     font-size: 20px;
                     font-weight: 600;
@@ -71,7 +72,8 @@
         
                 display: flex;
                 align-items: center;
-                background: red;
+                background: #ff00006a;
+                border: 1px solid gray;
                 color: white;
                 transition: 300ms;
                 
@@ -87,4 +89,70 @@
     }
 
     
+}
+.Sm_bandeja{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .Sm__b_div1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        position: absolute;
+        height: 6cm;
+        width: 8cm;
+        border: 1px solid black;
+        border-radius: 5px;
+        background: white;
+        margin-top: 38px;
+        
+
+        input{
+            height: 0.7cm;
+            width: 7.7cm;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+        .Sm__b_dv_div2{
+            width: 100%;
+            span{
+                display: flex;
+                align-items: center;
+                justify-content: left;
+                gap: 10px;
+                font-size: 14px;
+                font-weight: 300;
+                background: #80808045;
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                i{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 17px;
+                    font-weight: 300;
+                }
+            }
+        }
+        .Sm__b_Misproyecto{
+            display: flex;
+            align-items: start;
+            justify-content: left;
+            width: 100%;
+            h3{
+                margin: 0;
+                font-size: 14px;
+                font-weight: 500;
+            }
+            img{
+                height: 20px;
+                width: 20px;
+                border-radius: 100%;
+                border: 1px solid gray;
+            }
+        }
+    
+}
 }
