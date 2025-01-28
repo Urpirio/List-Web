@@ -1,17 +1,17 @@
-import React, { Component, createElement } from 'react';
+import React, { Component, createElement, useState } from 'react';
 import "./style/Svmainproyects.less";
+import SvModalproyects from './SvModalproyects';
+import SvBtnProyects from './btns/SvBtnProyects';
 
 export default class SvmainProyects extends Component {
   render() {
+
+    
+
     return (
       <div className='SvmainProyects'>
-        <div className='SvmainProyects__div1'>
-            <h3>Mis proyectos</h3>
-            <div className='SVMP_div1'>
-            <button><i class="bi bi-plus"></i></button>
-            <button><i class='bx bx-chevron-down'></i></button>
-            </div>
-        </div>
+        <SvBtnProyects/>
+        <SvModalproyects/>
         <div className='SvmainProyectsdiv2'>
             
         </div>

@@ -4,6 +4,7 @@ import SVheader from './components/Sventana/SVheader';
 import SVmain from './components/Sventana/SVmain';
 import SvheaderData from './components/Sventana/Data/SvheaderData';
 import Smain from './components/main/Smain';
+import SvModalNewProyect from './components/Sventana/SvModalNewProyect';
 
 export default class Structura extends Component {
   render() {
@@ -39,11 +40,19 @@ export default class Structura extends Component {
         }
     );
 
+
+    const CloseModal = () =>{
+        
+    }
+    
     return (
       <div className='body'>
         <section className='Sventana' >
             {startlist}
             <SVmain/>
+        </section>
+        <section onClick={CloseModal} className='SvModalNewProyets' id='SvModalNewProyets'>
+        <SvModalNewProyect/>
         </section>
         <section className='Smain'>
             <Smain/>
