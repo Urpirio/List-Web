@@ -16,6 +16,7 @@ export default function SvBtnProyects2(){
         }else{
             document.getElementById("SvModalProyects").style.display = "none" ;
         };
+
     };
 
 

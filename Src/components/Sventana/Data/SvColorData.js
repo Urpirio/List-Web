@@ -1,7 +1,7 @@
   const SvColorData = [
     {
         color: "Azul",
-        change: "",
+        change: "SvAzul",
         Svcolor: "SvAzul",
         className: "SvSelectAzul",
     },

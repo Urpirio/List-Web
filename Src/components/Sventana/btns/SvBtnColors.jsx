@@ -1,12 +1,15 @@
 import { useState } from "react"; 
 import { boleanoCloseModal } from "./SvbtnCloseModal";
 
+
+export let id;
+export let idcolor;
 export let numF;
 export let ColorSelect;
 export default function SvBtnColors(){
 
     const [ShowColor , setShowColor] = useState(true);
-
+    
     
     const ChangeColor = () =>{
         setShowColor(!ShowColor);
@@ -32,7 +35,7 @@ export default function SvBtnColors(){
 
     return(
         <button onClick={ChangeColor}>
-                <span className='SvModalNP__div1_Span1'><i></i>Negro</span>
+                <span className='SvModalNP__div1_Span1' id="SvModalNP__div1_Span1"><i id={idcolor}></i><span id = "ColorWork">Negro</span></span>
                 <span className='SvModalNP__div1_Span2'><i class='bx bx-chevron-down'></i></span>
         </button>
     )
