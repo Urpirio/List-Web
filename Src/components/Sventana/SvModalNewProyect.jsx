@@ -8,25 +8,18 @@ import "./style/SvModalNewProyect.less";
 import { SvbtnCancelarModal } from './btns/SvbtnCancelarModal';
 import SvbtnAñadirPModal from './btns/SvbtnAñadirModal';
 
+
 export let VariableColor;
 export default function SvModalNewProyect(){
 
   
-    const ColorDatalist = SvColorData.map( SDL =>{
-        return(
-            <SvSelect1 color ={SDL.color} Svcolor = {SDL.Svcolor}  className = {SDL.className}/>
-        );
-    });
+    // const ColorDatalist = SvColorData.map( SDL =>{
+    //     return(
+    //         <SvSelect1 color ={SDL.color} Svcolor = {SDL.Svcolor}  className = {SDL.className}/>
+    //     );
+    // });
 
    
-    
-   
-    const [text, setText] = useState('HOLA');
-
-    const ChangeText = (e)=>{
-      setText(e.target.value)
-      to
-    };
 
     const SelectAzul = () =>{
       let SvModalNP__div1_Span1 = document.getElementById("SvModalNP__div1_Span1");
@@ -322,10 +315,10 @@ export default function SvModalNewProyect(){
         <div className='SvModalNP__div2'>
             <div className='SvModalNP__d2_div1'>
                 <label htmlFor="Nombre">Nombre</label>
-                <input onChange={ChangeText} type="text" name='Nombre' value={text}  id='Nombre' maxLength={120}/>
+                <input  type="text" name='Nombre'   id='Nombre' maxLength={120}/>
             </div>
             <div className='SvModalNP__d2_div2'>
-            <span>{text}/120</span>
+            <span>0/120</span>
             </div>
         </div>
         <div className='SvModalNP__div3'>

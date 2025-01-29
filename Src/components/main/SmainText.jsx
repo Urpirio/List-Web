@@ -19,9 +19,6 @@ export default class SmainText extends Component {
     const Cancelar = () =>{
         document.querySelector(".SM_div2_div1").style.display = "none";
         document.getElementById("SM__div1_Addtarea").style.display ="flex";
-        if(document.getElementById()){
-
-        }
     };
 
     const AñadirTarea = () =>{
@@ -45,10 +42,10 @@ export default class SmainText extends Component {
         </div>
         
         </div>`;
-        }else{
-           
-        }
 
+        document.getElementById("inputTitulo").value = "";
+        document.getElementById("TextareaDescripcion").value = "";
+        };
     };
 
     // const AñadirTareaK = (e) =>{
