@@ -6,6 +6,7 @@ import SvBtnCloseModalp from './btns/SvbtnCloseModal';
 import SvColorData from './Data/SvColorData';
 import "./style/SvModalNewProyect.less";
 import { SvbtnCancelarModal } from './btns/SvbtnCancelarModal';
+import SvbtnAñadirPModal from './btns/SvbtnAñadirModal';
 
 export let VariableColor;
 export default function SvModalNewProyect(){
@@ -368,7 +369,7 @@ export default function SvModalNewProyect(){
         </div>
         <div className='SvModalNP__div4'>
               <SvbtnCancelarModal/>
-              <button id='SvModalNP__BtnAñadir' >Añadir</button>
+              <SvbtnAñadirPModal/>
             </div>
       </dialog>
     );

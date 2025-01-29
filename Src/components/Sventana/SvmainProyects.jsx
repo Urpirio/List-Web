@@ -12,7 +12,7 @@ export default class SvmainProyects extends Component {
       <div className='SvmainProyects'>
         <SvBtnProyects/>
         <SvModalproyects/>
-        <div className='SvmainProyectsdiv2'>
+        <div className='SvmainProyectsdiv2' id='SvmainProyectsdiv2'>
             
         </div>
       </div>
