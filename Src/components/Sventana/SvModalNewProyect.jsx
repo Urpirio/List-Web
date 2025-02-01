@@ -69,6 +69,7 @@ export default function SvModalNewProyect(){
           alert("Existe un error en el Switch en el documento SvModalNewProyects Linea 36");
           break;  
       };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     const SelectRojo = () =>{
@@ -115,7 +116,8 @@ export default function SvModalNewProyect(){
           document.getElementById("SvSelectRojo").style.display = "none";
           VariableColor = 2;
           break;
-      }
+      };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     const SelectVerde = () =>{
@@ -163,6 +165,7 @@ export default function SvModalNewProyect(){
           VariableColor = 3;
           break;
       };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     const SelectAmarrillo = () =>{
@@ -210,6 +213,7 @@ export default function SvModalNewProyect(){
           VariableColor = 4;
           break;
       };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     const SelectMorado = () =>{
@@ -257,6 +261,7 @@ export default function SvModalNewProyect(){
           VariableColor = 5;
           break;
       };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     const SelectNegro = () =>{
@@ -304,6 +309,7 @@ export default function SvModalNewProyect(){
           VariableColor = 6;
           break;
       };
+      document.getElementById('SvModalNP__d3_div2').style.display = 'none';
     };
 
     return (

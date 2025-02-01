@@ -2,16 +2,18 @@ import React, { Component, useState } from 'react';
 import "./style/SmainText.less";
 import SmainModalDeploy from './SmainModalDeploy';
 import SmainModal from './SmainModal';
+import { SvBtnProyects1 } from '../Sventana/SvmainProyects';
 
 
 
 
+export let Class;
 export default class SmainText extends Component {
   render() {
 
     let placeholderV = "Escribe tus metas aqui";
     
-    let clAss;
+
     let Vacio;
 
     
@@ -26,19 +28,43 @@ export default class SmainText extends Component {
 
         let InputTitulo = document.getElementById("inputTitulo").value;
         let TextareaDescripcion = document.getElementById("TextareaDescripcion").value;
+
+        switch(SvBtnProyects1){
+            case 1:
+                Class = 2;
+                break;
+            case 2:
+                Class = 3;
+                break;
+            case 3:
+                Class = 4;
+                break;
+            case 4:
+                Class = 5;
+                break;
+            case 5:
+                Class = 6;
+                break;
+            case 6:
+                Class = 1;
+                break;
+            default:
+                Class = 1;
+                break;
+        };
         
 
         if(InputTitulo != ""){
         let listarea = document.querySelector(".listarea");
 
-        listarea.innerHTML += `<div class = '${"SM__list" + clAss} Sm__list'>
+        listarea.innerHTML += `<div class = '${"SM__list" + Class} Sm__list'>
         <i class='bx bx-check'></i>
         <div class = 'Sm__list_div1' >
         <h3>${InputTitulo}</h3>
         <p>${TextareaDescripcion}</p>
         </div>
         <div class = 'Sm__list_div2'>
-        <button>Remover</button>
+        <button id = 'SmBtnRemover'>Remover</button>
         </div>
         
         </div>`;
