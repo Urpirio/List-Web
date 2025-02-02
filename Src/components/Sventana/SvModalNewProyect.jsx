@@ -332,6 +332,9 @@ export default function SvModalNewProyect(){
             <h3>Color</h3>
             <SvBtnColors/>
             </div>
+
+
+
             <dialog className='SvModalNP__d3_div2' id='SvModalNP__d3_div2' open>
 
             <span className="SvSelectAzul" id="SvSelectAzul" onClick={SelectAzul} >

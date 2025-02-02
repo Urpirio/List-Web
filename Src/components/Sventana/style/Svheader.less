@@ -9,7 +9,7 @@
     .Svheader__div1{
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 70px;
         .Svheader__sdiv1{
             display: flex;
             align-items: center;
@@ -23,12 +23,43 @@
             align-items: center;
             gap: 10px;
 
-            button{
+            #btn1{
                 height: 30px;
                 width: 30px;
-                font-size: 20px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                font-size: 22px;
                 background: none;
                 border: none;
+                cursor: pointer;
+                i{
+                    margin-top: 3.5px;
+                }
+                &:hover{
+                    background: #dfdede;
+                    border-radius: 5px;
+                }
+            }
+            #btn2{
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 22px;
+                font-weight: 800;
+                border: none;
+                background: none;
+                cursor: pointer;
+                i{
+                    margin-right: 2px;
+                }
+                &:hover{
+                    background: #dfdede;
+                    border-radius: 5px;
+                    
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import "./style/Svheader.less"
+import "./style/Svheader.less";
+import SmBtnCloseWindow from '../main/btns/SmBtnCloseWindow';
 
 export default class SVheader extends Component {
   static propTypes = {
@@ -13,7 +14,10 @@ export default class SVheader extends Component {
 
   };
 
+
   render() {
+
+
     return (
         <header className='Svheader' id={this.props.identify}>
         <div className='Svheader__div1'>
@@ -23,8 +27,8 @@ export default class SVheader extends Component {
             <i class='bx bx-chevron-down'></i>
         </div>
         <div className='Svheader__sdiv2'>
-            <button><i class='bx bx-bell'></i></button>
-            <button><i class="bi bi-box-arrow-left"></i></button>
+            <button  id='btn1'><i class='bx bx-bell'></i></button>
+            <SmBtnCloseWindow/>
         </div>
         </div>
         {this.props.CerrarS}

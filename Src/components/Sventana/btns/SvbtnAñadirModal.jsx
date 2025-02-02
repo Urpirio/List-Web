@@ -1,6 +1,4 @@
 import { VariableColor } from "../SvModalNewProyect";
-import { createElement, useEffect } from "react";
-import { useRef } from "react";
 import './style/SvbtnAñadirModal.less';
 
 export let SvHover1;
@@ -10,6 +8,7 @@ export let SvHover4;
 export let SvHover5;
 export let SvInfo;
 
+
 export default function SvbtnAñadirPModal(){
     let num;
     const Prub = () => {
@@ -18,6 +17,7 @@ export default function SvbtnAñadirPModal(){
             SvInfo = 1;
             let N = document.getElementById('SM_titles');
             N.innerHTML += `<h1 id = 'SM__title${SvInfo}' class = 'SM__title' >${document.getElementById('Nombre').value}</h1>`;
+            
           }else if(SvInfo == 1){
             SvInfo = SvInfo + 1;
             let N = document.getElementById('SM_titles');
@@ -276,6 +276,8 @@ export default function SvbtnAñadirPModal(){
             };
         }else if(num > 4){
             document.getElementById('Warnning').style.display = "flex";
+            // Hacer el warnning// en un jsx
+            
         };
 
       

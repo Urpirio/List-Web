@@ -23,6 +23,8 @@ export default class SmainText extends Component {
         document.getElementById("SM__div1_Addtarea").style.display ="flex";
     };
 
+    let ContadorList;
+    let ContadorClass;
     const AñadirTarea = () =>{
 
 
@@ -52,28 +54,43 @@ export default class SmainText extends Component {
                 Class = 1;
                 break;
         };
+
+        if(ContadorList == undefined){
+            ContadorList = 1
+        };
+        if(ContadorClass == undefined){
+            ContadorClass = 1
+        }
         
 
         if(InputTitulo != ""){
+            ContadorList = ContadorList + 1;
+            ContadorClass =  ContadorClass + 1;
         let listarea = document.querySelector(".listarea");
+        let CreatePrueba = document.createElement('button');
+        CreatePrueba.id = `SmBtnRemover${Class}`
+        CreatePrueba.addEventListener('click', ()=>{
+           document.querySelector(`.${"Sm__list" + ContadorClass}`).remove()
+        });
+        let text = document.createTextNode('Remover');
+        CreatePrueba.append(text);
 
-        listarea.innerHTML += `<div class = '${"SM__list" + Class} Sm__list'>
+        listarea.innerHTML += `<div class = 'Sm__list${ContadorClass} Sm__list' id = '${"SM__list" + Class}'>
         <i class='bx bx-check'></i>
         <div class = 'Sm__list_div1' >
         <h3>${InputTitulo}</h3>
         <p>${TextareaDescripcion}</p>
         </div>
-        <div class = 'Sm__list_div2'>
-        <button id = 'SmBtnRemover'>Remover</button>
+        <div class = 'Sm__list_div2${ContadorList}'>
         </div>
         
         </div>`;
 
+        document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba);
         document.getElementById("inputTitulo").value = "";
         document.getElementById("TextareaDescripcion").value = "";
         };
     };
-
     // const AñadirTareaK = (e) =>{
     // };
 

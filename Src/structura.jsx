@@ -47,16 +47,20 @@ export default class Structura extends Component {
     
     return (
       <div className='body'>
-        <section className='Sventana' >
+
+        <section className='Sventana' id='Sventana' >
             {startlist}
             <SVmain/>
         </section>
+
         <section onClick={CloseModal} className='SvModalNewProyets' id='SvModalNewProyets'>
-        <SvModalNewProyect/>
+            <SvModalNewProyect/>
         </section>
-        <section className='Smain'>
+
+        <section className='Smain' id='Smain'>
             <Smain/>
         </section>
+        
       </div>
     )
   }
