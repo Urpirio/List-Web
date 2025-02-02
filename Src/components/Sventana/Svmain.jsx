@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SvmainProyects from './SvmainProyects';
 import "./style/Svmain.less";
-import SvModalproyects from './SvModalproyects';
 
 export default class SVmain extends Component {
   render() {
