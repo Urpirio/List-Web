@@ -25,6 +25,10 @@ export default class SmainText extends Component {
 
     let ContadorList;
     let ContadorClass;
+
+
+
+
     const AñadirTarea = () =>{
 
 
@@ -67,13 +71,41 @@ export default class SmainText extends Component {
             ContadorList = ContadorList + 1;
             ContadorClass =  ContadorClass + 1;
         let listarea = document.querySelector(".listarea");
-        let CreatePrueba = document.createElement('button');
-        CreatePrueba.id = `SmBtnRemover${Class}`
-        CreatePrueba.addEventListener('click', ()=>{
-           document.querySelector(`.${"Sm__list" + ContadorClass}`).remove()
+
+//Parte que genera los botones de remove.
+        if(ContadorList == 2){
+            var CreatePrueba1 = document.createElement('button');
+        CreatePrueba1.id = `SmBtnRemover${Class}`
+        CreatePrueba1.addEventListener('click', ()=>{
+           document.querySelector(`.Sm__list2`).remove()
         });
-        let text = document.createTextNode('Remover');
-        CreatePrueba.append(text);
+        }else if(ContadorList == 3){
+            var CreatePrueba2 = document.createElement('button');
+        CreatePrueba2.id = `SmBtnRemover${Class}`
+        CreatePrueba2.addEventListener('click', ()=>{
+           document.querySelector('.Sm__list3').remove()
+        });
+        }else if(ContadorList == 4){
+            var CreatePrueba3 = document.createElement('button');
+        CreatePrueba3.id = `SmBtnRemover${Class}`
+        CreatePrueba3.addEventListener('click', ()=>{
+           document.querySelector('.Sm__list4').remove()
+        });
+
+        }else if(ContadorList == 5){
+            var CreatePrueba4 = document.createElement('button');
+            CreatePrueba4.id = `SmBtnRemover${Class}`
+            CreatePrueba4.addEventListener('click', ()=>{
+               document.querySelector('.Sm__list5').remove()
+            });
+        };
+
+
+
+
+
+
+        
 
         listarea.innerHTML += `<div class = 'Sm__list${ContadorClass} Sm__list' id = '${"SM__list" + Class}'>
         <i class='bx bx-check'></i>
@@ -86,7 +118,34 @@ export default class SmainText extends Component {
         
         </div>`;
 
-        document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba);
+        if(ContadorList == 2){
+            let text = document.createTextNode('Remover');
+            CreatePrueba1.append(text);
+            document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba1);
+        }else if(ContadorList == 3){
+            let text = document.createTextNode('Remover');
+            CreatePrueba2.append(text);
+            document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba2);
+        }else if(ContadorList == 4){
+            let text = document.createTextNode('Remover');
+            CreatePrueba3.append(text);
+            document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba3);
+        }else if(ContadorList == 5){
+            let text = document.createTextNode('Remover');
+            CreatePrueba4.append(text);
+            document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba4);
+        }else if(ContadorList == 6){
+            let text = document.createTextNode('Remover');
+            CreatePrueba2.append(text);
+            document.querySelector(`.Sm__list_div2${ContadorList}`).append(CreatePrueba5);
+        }
+
+
+
+
+
+
+
         document.getElementById("inputTitulo").value = "";
         document.getElementById("TextareaDescripcion").value = "";
         };
