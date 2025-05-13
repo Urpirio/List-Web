@@ -75,21 +75,24 @@ export default class SmainText extends Component {
 //Parte que genera los botones de remove.
         if(ContadorList == 2){
             var CreatePrueba1 = document.createElement('button');
-        CreatePrueba1.id = `SmBtnRemover${Class}`
-        CreatePrueba1.addEventListener('click', ()=>{
-           document.querySelector(`.Sm__list2`).remove()
+        CreatePrueba1.id = `SmBtnRemover2`
+        CreatePrueba1.addEventListener('click', (e)=>{
+            let item = e.target.parentElement;
+           document.querySelector(`.Sm__list2`).remove(item)
         });
         }else if(ContadorList == 3){
             var CreatePrueba2 = document.createElement('button');
-        CreatePrueba2.id = `SmBtnRemover${Class}`
-        CreatePrueba2.addEventListener('click', ()=>{
-           document.querySelector('.Sm__list3').remove()
+        CreatePrueba2.id = `SmBtnRemover2`
+        CreatePrueba2.addEventListener('click', (e)=>{
+            let item = e.target.parentElement;
+            document.querySelector(`.Sm__list3`).remove(item)
         });
         }else if(ContadorList == 4){
             var CreatePrueba3 = document.createElement('button');
-        CreatePrueba3.id = `SmBtnRemover${Class}`
-        CreatePrueba3.addEventListener('click', ()=>{
-           document.querySelector('.Sm__list4').remove()
+        CreatePrueba3.id = `SmBtnRemover4`;
+        CreatePrueba3.addEventListener('click', (e)=>{
+            let item = e.target.parentElement;
+            document.querySelector(`.Sm__list4`).remove(item)
         });
 
         }else if(ContadorList == 5){
